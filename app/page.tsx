@@ -1,4 +1,5 @@
 import GraficoMaturidade from "@/components/home/graficoMaturidade/GraficoMaturidade";
+import GraficoCoberturaBlocos from "@/components/home/graficoCoberturaBlocos/GraficoCoberturaBlocos";
 import Card from "@/components/ui/Card";
 import Container from "@/components/ui/Container";
 import MainTemplate from "@/components/ui/MainTemplate";
@@ -17,7 +18,11 @@ export default function Home() {
                 <GraficoMaturidade />
               </Card>
               <div className="w-full h-150 bg-card rounded-xl"></div>
-              <div className="w-full h-150 bg-card rounded-xl"></div>
+              <div className="w-full h-150 bg-card rounded-xl overflow-auto">
+                <Card>
+                  <GraficoCoberturaBlocos />
+                </Card>
+              </div>
             </div>
             <div className="w-full h-150 bg-card rounded-xl"></div>
             <div className="w-full h-150 bg-card rounded-xl"></div>
