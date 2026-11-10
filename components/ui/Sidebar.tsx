@@ -5,10 +5,9 @@ import {
   ClipboardList,
   FileText,
   LayoutDashboard,
-  Settings,
 } from "lucide-react";
+
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 const navigation = [
   {
@@ -21,8 +20,13 @@ const navigation = [
         icon: ClipboardList,
       },
       {
-        label: "Solicitações",
-        href: "/explore/solicitations",
+        label: "Participantes",
+        href: "/participantes",
+        icon: Building2,
+      },
+      {
+        label: "Indicadores Técnicos",
+        href: "/indicadores-tecnicos",
         icon: Building2,
       },
 
@@ -40,13 +44,6 @@ const navigation = [
 ];
 
 export default function Sidebar() {
-  const pathname = usePathname();
-
-  const isActive = (href: string) =>
-    href === "/dashboard"
-      ? pathname === href
-      : pathname === href || pathname.startsWith(`${href}/`);
-
   return (
     <aside
       className="
@@ -79,10 +76,9 @@ export default function Sidebar() {
               {group.title}
             </h2>
 
-            <div className="space-y-1">
+            <div className="flex flex-col q col-2">
               {group.items.map((item) => {
                 const Icon = item.icon;
-                const active = isActive(item.href);
 
                 return (
                   <Link
@@ -90,23 +86,14 @@ export default function Sidebar() {
                     href={item.href}
                     title={item.label}
                     aria-label={item.label}
-                    aria-current={active ? "page" : undefined}
                     className={`
                       flex min-h-11 items-center justify-center gap-3
                       rounded-lg px-2 text-sm font-medium
                       transition-colors md:justify-start md:px-3
-                      ${
-                        active
-                          ? "bg-cyan-50 text-cyan-900"
-                          : "text-white hover:bg-slate-800/20"
-                      }
+                      text-white hover:bg-slate-800/20
                     `}
                   >
-                    <Icon
-                      size={20}
-                      strokeWidth={active ? 2.3 : 1.8}
-                      className="shrink-0"
-                    />
+                    <Icon size={20} strokeWidth={2.3} className="shrink-0" />
 
                     <span className="hidden truncate md:block">
                       {item.label}
@@ -118,46 +105,6 @@ export default function Sidebar() {
           </section>
         ))}
       </nav>
-
-      {/* Configurações */}
-      <div className="border-t border-slate-200 p-2 md:p-3">
-        <Link
-          href="/configuracoes"
-          title="Configurações"
-          aria-label="Configurações"
-          className={`
-            flex min-h-11 items-center justify-center gap-3
-            rounded-lg px-2 text-sm font-medium md:justify-start md:px-3 text-white
-            ${
-              isActive("/configuracoes")
-                ? "bg-cyan-50 text-cyan-900"
-                : "text-white hover:bg-slate-800/20"
-            }
-          `}
-        >
-          <Settings size={20} className="shrink-0" />
-          <span className="hidden md:block">Configurações</span>
-        </Link>
-      </div>
-      <div className="mt-auto border-t border-slate-200 p-2 md:p-3">
-        <Link
-          href="/configuracoes"
-          title="Configurações"
-          aria-label="Configurações"
-          className={`
-            flex min-h-11 items-center justify-center gap-3
-            rounded-lg px-2 text-sm font-medium md:justify-start md:px-3
-            ${
-              isActive("/configuracoes")
-                ? "bg-cyan-50 text-cyan-900"
-                : "text-white hover:bg-slate-800/20"
-            }
-          `}
-        >
-          <Settings size={20} className="shrink-0" />
-          <span className="hidden md:block">Sair</span>
-        </Link>
-      </div>
     </aside>
   );
 }

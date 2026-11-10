@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-## 1 - Iniciando
+## 1 - Inicialização do projeto
 
 npm install
 
 npm i lucide-react
 
-```bash
+npm i tailwind-merge
 
-```
-=======
-# cess-questionario-main
->>>>>>> origin/main
+=========================================================================================================
