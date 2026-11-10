@@ -1,36 +1,7 @@
 "use client";
 
-interface GraficoMaturidadeProps {
-  nivel?: "N1" | "N2" | "N3" | "N4" | "N5";
-}
-
-const maturidadeConfig = {
-  N5: {
-    porcentagem: 0,
-    cor: "#EF4444",
-    descricao: "Muito baixo",
-  },
-  N4: {
-    porcentagem: 25,
-    cor: "#F97316",
-    descricao: "Baixo",
-  },
-  N3: {
-    porcentagem: 50,
-    cor: "#EAB308",
-    descricao: "Intermediário",
-  },
-  N2: {
-    porcentagem: 75,
-    cor: "#84CC16",
-    descricao: "Alto",
-  },
-  N1: {
-    porcentagem: 100,
-    cor: "#22C55E",
-    descricao: "Excelente",
-  },
-};
+import { maturidadeConfig } from "./GraficoMaturidadeData";
+import { GraficoMaturidadeProps } from "./types";
 
 export default function GraficoMaturidade({
   nivel = "N2",
@@ -48,8 +19,7 @@ export default function GraficoMaturidade({
           )`,
         }}
       >
-        {/* Espaço interno do círculo */}
-        <div className="absolute inset-[9px] flex flex-col items-center justify-center rounded-full bg-card">
+        <div className="absolute inset-2 flex flex-col items-center justify-center rounded-full bg-card">
           <span
             className="text-4xl font-bold"
             style={{ color: maturidade.cor }}
@@ -68,7 +38,7 @@ export default function GraficoMaturidade({
           className="text-sm font-semibold uppercase tracking-wider"
           style={{ color: maturidade.cor }}
         >
-          Nivel de Maturidade
+          Nível de Maturidade
         </span>
 
         <p className="text-sm font-medium" style={{ color: maturidade.cor }}>
