@@ -48,14 +48,14 @@ export default function Sidebar() {
     <aside
       className="
         z-40 h-full
-        border-r border-slate-200 bg-navbar
+        border-r border-slate-200/50 bg-navbar
       "
     >
       {/* Logo */}
       <Link
         href="/dashboard"
         aria-label="CESS Connections — página inicial"
-        className="flex h-16 items-center justify-center gap-3 border-b border-slate-200 px-3 md:justify-start md:px-5"
+        className="flex h-16 items-center justify-center gap-3 border-b border-slate-200/50 px-3 md:justify-start md:px-5"
       >
         <div className="bg-card w-12 h-12 rounded-full"></div>
 
