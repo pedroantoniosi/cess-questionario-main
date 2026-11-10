@@ -6,7 +6,7 @@ interface CardsProps {
 export default function Cards({ children, className = "" }: CardsProps) {
   const content = (
     <article
-      className={`flex flex-col gap-4 p-4 bg-card rounded-xl overflow-auto ${className}`}
+      className={`w-full flex flex-col gap-4 p-4 bg-card rounded-xl overflow-auto ${className}`}
     >
       {children}
     </article>

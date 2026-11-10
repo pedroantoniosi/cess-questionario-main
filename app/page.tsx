@@ -11,15 +11,14 @@ export default function Home() {
       <MainTemplate>
         <section className="bg-template py-8">
           <Container className="flex flex-col gap-16">
-            <div className="grid grid-cols-3 justify-between gap-4">
+            <div className="grid xl:grid-cols-3 justify-center  gap-4">
               <Card>
-                <div className="mt-auto">
+                <div className="my-auto">
                   <GraficoMaturidade />
                 </div>
-                <GraficoMaturidade />
               </Card>
-              <div className="w-full h-150 bg-card rounded-xl"></div>
-              <div className="w-full h-150 bg-card rounded-xl overflow-auto">
+              <div className="w-full  bg-card rounded-xl"></div>
+              <div className="w-full bg-card rounded-xl ">
                 <Card>
                   <GraficoCoberturaBlocos />
                 </Card>
