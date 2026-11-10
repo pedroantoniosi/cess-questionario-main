@@ -2,9 +2,10 @@
 
 import {
   Building2,
+  ChartNoAxesCombined,
   ClipboardList,
-  FileText,
   LayoutDashboard,
+  Settings,
 } from "lucide-react";
 
 import Link from "next/link";
@@ -15,7 +16,7 @@ const navigation = [
     items: [
       { label: "Visão geral", href: "/", icon: LayoutDashboard },
       {
-        label: "Questionario",
+        label: "Questionário",
         href: "/questionario",
         icon: ClipboardList,
       },
@@ -27,56 +28,75 @@ const navigation = [
       {
         label: "Indicadores Técnicos",
         href: "/indicadores-tecnicos",
-        icon: Building2,
+        icon: ChartNoAxesCombined,
       },
-
-      { label: "Documentação", href: "/explore/documentation", icon: FileText },
+      {
+        label: "Configurações",
+        href: "/configuracoes",
+        icon: Settings,
+      },
     ],
   },
-  // {
-  //   title: "Ecossistema",
-  //   items: [
-  //     { label: "Mapa da cadeia", href: "/mapa", icon: MapPinned },
-  //     { label: "Pesquisa e inovação", href: "/pesquisa", icon: GraduationCap },
-  //     { label: "Oportunidades", href: "/oportunidades", icon: Target },
-  //   ],
-  // },
 ];
 
 export default function Sidebar() {
   return (
     <aside
       className="
-        z-40 h-full
-        border-r border-slate-200/50 bg-navbar
+        fixed bottom-0 left-0 z-40 w-full
+        border-t border-slate-200/50 bg-navbar
+        md:sticky md:top-0 md:h-screen md:w-64
+        md:shrink-0 md:overflow-hidden
+        md:border-r md:border-t-0
       "
     >
-      {/* Logo */}
+      {/* Logo - Desktop */}
       <Link
         href="/dashboard"
         aria-label="CESS Connections — página inicial"
-        className="flex h-16 items-center justify-center gap-3 border-b border-slate-200/50 px-3 md:justify-start md:px-5"
+        className="
+          hidden h-16 items-center gap-3
+          border-b border-slate-200/50 px-5
+          md:flex
+        "
       >
-        <div className="bg-card w-12 h-12 rounded-full"></div>
+        <div className="bg-card h-12 w-12 shrink-0 rounded-full" />
 
-        <span className="hidden min-w-0 md:block">
+        <span className="min-w-0">
           <span className="block font-bold text-white">CESS</span>
-          <span className="block text-xs text-gray-200">Questionario</span>
+          <span className="block text-xs text-gray-200">Questionário</span>
         </span>
       </Link>
 
       {/* Navegação */}
       <nav
         aria-label="Navegação principal"
-        className="flex-1 space-y-6 overflow-y-auto px-2 py-5 md:px-3"
+        className="
+          flex w-full items-center justify-around
+          gap-1 px-1 py-2
+          md:flex-col md:items-stretch
+          md:gap-6 md:px-3 md:py-5
+        "
       >
         {navigation.map((group) => (
-          <section key={group.title}>
-            <h2 className="mb-2 hidden px-3 text-xs font-semibold uppercase tracking-wider text-slate-400 md:block">
+          <section key={group.title} className="w-full">
+            <h2
+              className="
+                hidden px-3 pb-2
+                text-xs font-semibold uppercase
+                tracking-wider text-slate-400
+                md:block
+              "
+            >
               {group.title}
             </h2>
 
-            <div className="flex flex-col q col-2">
+            <div
+              className="
+                flex w-full items-center justify-around gap-1
+                md:flex-col md:items-stretch
+              "
+            >
               {group.items.map((item) => {
                 const Icon = item.icon;
 
@@ -86,18 +106,22 @@ export default function Sidebar() {
                     href={item.href}
                     title={item.label}
                     aria-label={item.label}
-                    className={`
-                      flex min-h-11 items-center justify-center gap-3
-                      rounded-lg px-2 text-sm font-medium
-                      transition-colors md:justify-start md:px-3
-                      text-white hover:bg-slate-800/20
-                    `}
+                    className="
+                      flex min-w-0 flex-1 flex-col
+                      items-center justify-center gap-1
+                      rounded-lg px-1 py-2
+                      text-center text-[10px] font-medium
+                      text-white transition-colors
+                      hover:bg-slate-800/20
+
+                      md:min-h-11 md:flex-row
+                      md:justify-start md:gap-3
+                      md:px-3 md:text-left md:text-sm
+                    "
                   >
                     <Icon size={20} strokeWidth={2.3} className="shrink-0" />
 
-                    <span className="hidden truncate md:block">
-                      {item.label}
-                    </span>
+                    <span className="w-full truncate">{item.label}</span>
                   </Link>
                 );
               })}
