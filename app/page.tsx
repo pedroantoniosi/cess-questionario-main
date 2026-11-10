@@ -1,5 +1,6 @@
-import GraficoMaturidade from "@/components/home/graficoMaturidade/GraficoMaturidade";
+import DistribuicaoPorEstado from "@/components/home/distribuicaoPorEstado/DistribuicaoPorEstado";
 import GraficoCoberturaBlocos from "@/components/home/graficoCoberturaBlocos/GraficoCoberturaBlocos";
+import GraficoMaturidade from "@/components/home/graficoMaturidade/GraficoMaturidade";
 import Card from "@/components/ui/Card";
 import Container from "@/components/ui/Container";
 import MainTemplate from "@/components/ui/MainTemplate";
@@ -24,7 +25,9 @@ export default function Home() {
                 </Card>
               </div>
             </div>
-            <div className="w-full h-150 bg-card rounded-xl"></div>
+            <div className="w-full  bg-card rounded-xl">
+              <DistribuicaoPorEstado />
+            </div>
             <div className="w-full h-150 bg-card rounded-xl"></div>
           </Container>
         </section>
