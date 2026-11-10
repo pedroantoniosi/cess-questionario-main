@@ -1,16 +1,7 @@
-export interface EstadoDistribuicao {
-  estado: string;
-  sigla: string;
-  capital: string;
-  instalacoes: number;
-  percentual: number;
-  coordenadas: {
-    x: number;
-    y: number;
-  };
-}
+import { COORDENADAS_ESTADOS } from "./mapaBrasilPath";
+import { DistribuicaoPorEstadoDados } from "./types";
 
-export const distribuicaoPorEstado = {
+export const distribuicaoPorEstado: DistribuicaoPorEstadoDados = {
   titulo: "Distribuição por estado",
   descricao: "Distribuição geográfica das instalações cadastradas.",
 
@@ -20,48 +11,80 @@ export const distribuicaoPorEstado = {
       sigla: "RJ",
       capital: "Rio de Janeiro",
       instalacoes: 7,
-      percentual: 58.33,
-      coordenadas: { x: 73, y: 73 },
+      percentual: 35.0,
+      coordenadas: COORDENADAS_ESTADOS.RJ,
+    },
+    {
+      estado: "São Paulo",
+      sigla: "SP",
+      capital: "São Paulo",
+      instalacoes: 2,
+      percentual: 10.0,
+      coordenadas: COORDENADAS_ESTADOS.SP,
+    },
+    {
+      estado: "Distrito Federal",
+      sigla: "DF",
+      capital: "Brasília",
+      instalacoes: 2,
+      percentual: 10.0,
+      coordenadas: COORDENADAS_ESTADOS.DF,
+    },
+    {
+      estado: "Minas Gerais",
+      sigla: "MG",
+      capital: "Belo Horizonte",
+      instalacoes: 2,
+      percentual: 10.0,
+      coordenadas: COORDENADAS_ESTADOS.MG,
+    },
+    {
+      estado: "Rio Grande do Sul",
+      sigla: "RS",
+      capital: "Porto Alegre",
+      instalacoes: 1,
+      percentual: 5.0,
+      coordenadas: COORDENADAS_ESTADOS.RS,
     },
     {
       estado: "Maranhão",
       sigla: "MA",
       capital: "São Luís",
       instalacoes: 1,
-      percentual: 8.33,
-      coordenadas: { x: 65, y: 40 },
+      percentual: 5.0,
+      coordenadas: COORDENADAS_ESTADOS.MA,
     },
     {
       estado: "Santa Catarina",
       sigla: "SC",
       capital: "Florianópolis",
       instalacoes: 1,
-      percentual: 8.33,
-      coordenadas: { x: 52, y: 91 },
+      percentual: 5.0,
+      coordenadas: COORDENADAS_ESTADOS.SC,
     },
     {
       estado: "Paraná",
       sigla: "PR",
       capital: "Curitiba",
       instalacoes: 1,
-      percentual: 8.33,
-      coordenadas: { x: 60, y: 82 },
+      percentual: 5.0,
+      coordenadas: COORDENADAS_ESTADOS.PR,
     },
     {
       estado: "Bahia",
       sigla: "BA",
       capital: "Salvador",
       instalacoes: 1,
-      percentual: 8.33,
-      coordenadas: { x: 77, y: 61 },
+      percentual: 5.0,
+      coordenadas: COORDENADAS_ESTADOS.BA,
     },
     {
       estado: "Pernambuco",
       sigla: "PE",
       capital: "Recife",
       instalacoes: 1,
-      percentual: 8.33,
-      coordenadas: { x: 85, y: 48 },
+      percentual: 5.0,
+      coordenadas: COORDENADAS_ESTADOS.PE,
     },
-  ] satisfies EstadoDistribuicao[],
+  ],
 };

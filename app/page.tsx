@@ -11,12 +11,12 @@ export default function Home() {
       <MainTemplate>
         <section className="bg-template py-8">
           <Container className="flex flex-col gap-16">
-            <div className="grid grid-cols-3 justify-between gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 justify-between gap-4">
               <Card>
-                <div className="mt-auto">
+                <div className="flex flex-col gap-4">
+                  <GraficoMaturidade />
                   <GraficoMaturidade />
                 </div>
-                <GraficoMaturidade />
               </Card>
               <div className="w-full h-150 bg-card rounded-xl"></div>
               <div className="w-full h-150 bg-card rounded-xl overflow-auto">
@@ -25,7 +25,7 @@ export default function Home() {
                 </Card>
               </div>
             </div>
-            <div className="w-full  bg-card rounded-xl">
+            <div>
               <DistribuicaoPorEstado />
             </div>
             <div className="w-full h-150 bg-card rounded-xl"></div>
