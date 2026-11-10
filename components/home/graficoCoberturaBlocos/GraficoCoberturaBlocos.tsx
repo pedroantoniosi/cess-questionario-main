@@ -1,6 +1,6 @@
 "use client";
 
-import { Database, CircleHelp, X } from "lucide-react";
+import Icon from "@/components/ui/Icon";
 import { useGraficoCoberturaBlocos } from "./hooks/useGraficoCoberturaBlocos";
 import { GraficoCoberturaBlocosProps } from "./types";
 
@@ -30,8 +30,8 @@ export default function GraficoCoberturaBlocos({
       {/* CABEÇALHO */}
       <div className="flex items-start justify-between gap-3">
         <div className="flex items-start gap-3">
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/15 border border-amber-500/30 text-amber-400">
-            <Database className="h-5 w-5" />
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-500/15 border border-amber-100/30 text-amber-400">
+            <Icon name="database" size="md" />
           </div>
 
           <div className="flex flex-col">
@@ -47,9 +47,9 @@ export default function GraficoCoberturaBlocos({
         <button
           type="button"
           title="Instalações com cada bloco respondido por completo, em parte ou sem resposta."
-          className="text-gray-400 hover:text-white p-1 transition-colors"
+          className="p-1 transition-colors"
         >
-          <CircleHelp className="h-4 w-4" />
+          <Icon name="help" size="sm" className="text-gray-400 hover:text-white" />
         </button>
       </div>
 
@@ -65,7 +65,7 @@ export default function GraficoCoberturaBlocos({
               onClick={limparSelecao}
               className="text-gray-400 hover:text-white"
             >
-              <X className="h-3 w-3" />
+              <Icon name="close" size="xs" className="text-gray-400 hover:text-white" />
             </button>
           </div>
         )}
