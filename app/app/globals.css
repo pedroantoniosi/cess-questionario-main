@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+
+.bg-card {
+    background-color: #21222D;
+}
+
+.bg-template {
+    background-color: #2B2D3D;
+}
+
+.bg-navbar {
+    background-color: #5A5F79;
+}
