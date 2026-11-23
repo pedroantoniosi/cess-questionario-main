@@ -1,5 +1,9 @@
 ## 1 - Inicialização do projeto
 
+Node Version 26.5.0
+
+npm install -D eslint@latest
+
 npm install
 
 npm i lucide-react
@@ -16,11 +20,11 @@ npm run dev
 
 ## 3 - Design do projeto
 
-Teal
-#0D9488
-
-Green
-#65A30D
-
-Lime
+Verde-limão: Intensidade Alta
 #84CC16
+
+Verde-folha : Itensidade Média
+#397F35
+
+Verde-petróleo: Intensidade Baixo
+#0A4542
