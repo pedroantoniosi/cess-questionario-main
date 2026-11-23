@@ -1,14 +1,84 @@
 @import "tailwindcss";
 
+:root {
+    /* Background colors */
+    --color-card: #21222D;
+    --color-template: #2B2D3D;
+    --color-navbar: #5A5F79;
 
+    /* Status colors */
+    --color-low: #0A4542;
+    --color-medium: #318f58;
+    --color-high: #d2c514;
+}
+
+.bg-rh {
+    background-color: #0B1120;
+}
+
+.bg-rh-gradient {
+    background: #22C1C3;
+    background: linear-gradient(0deg, #0F505A 0%, #0B1120 100%);
+}
+
+/* Backgrounds */
 .bg-card {
-    background-color: #21222D;
+    background-color: var(--color-card);
 }
 
 .bg-template {
-    background-color: #2B2D3D;
+    background-color: var(--color-template);
 }
 
 .bg-navbar {
-    background-color: #5A5F79;
+    background-color: var(--color-navbar);
+}
+
+/* Text colors */
+.text-low {
+    color: var(--color-low);
+}
+
+.text-medium {
+    color: var(--color-medium);
+}
+
+.text-high {
+    color: var(--color-high);
+}
+
+/* Status backgrounds */
+.bg-low {
+    background-color: var(--color-low);
+}
+
+.bg-medium {
+    background-color: var(--color-medium);
+}
+
+.bg-high {
+    background-color: var(--color-high);
+}
+
+
+/* Status backgrounds */
+.border-low {
+    border-color: var(--color-low);
+}
+
+.border-medium {
+    border-color: var(--color-medium);
+}
+
+.border-high {
+    border-color: var(--color-high);
+
+}
+
+.btn-high {
+    background-color: var(--color-high);
+
+    &:hover {
+        background-color: hwb(84 9% 20% / 0.8);
+    }
 }

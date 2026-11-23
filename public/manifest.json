@@ -1,0 +1,30 @@
+{
+  "name": "Questionário - Avaliação de Maturidade para Descomissionamento",
+  "short_name": "Questionário",
+  "description": "Uma aplicação web para avaliar o nível de maturidade de instalações em processos de descomissionamento, com questionários, evidências, respostas, indicadores, relatórios e apoio à tomada de decisão.",
+  "version": "1.0.0",
+  "id": "/",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#f9fafb",
+  "theme_color": "#0B0F1A",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "categories": [
+    "business",
+    "productivity",
+    "utilities"
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "lang": "pt-BR",
+  "dir": "ltr"
+}

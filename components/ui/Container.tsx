@@ -7,7 +7,7 @@ type ContainerProps = {
 
 export default function Container({ children, className }: ContainerProps) {
   return (
-    <div className={twMerge(" w-full max-w-380  mx-auto py-4 px-2", className)}>
+    <div className={twMerge(" w-full max-w-380 mx-auto py-4 px-4", className)}>
       {children}
     </div>
   );

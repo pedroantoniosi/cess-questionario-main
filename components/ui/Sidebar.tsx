@@ -1,55 +1,72 @@
 "use client";
 
 import {
-  Building2,
-  ChartNoAxesCombined,
   ClipboardList,
-  LayoutDashboard,
-  Settings,
+  Home,
+  Users,
+  LucideClipboardCheck,
+  type LucideIcon,
+  Grid2X2,
 } from "lucide-react";
 
 import Link from "next/link";
 
-const navigation = [
+import DisplayRestriction from "@/components/auth/DisplayRestriction";
+import NavItem from "@/components/ui/NavItem";
+import type { UserProfile } from "@/shared/contexts/AuthContext";
+
+interface NavigationItem {
+  label: string;
+  href: string;
+  icon: LucideIcon;
+  /** Sem essa prop, o item aparece para qualquer perfil. */
+  allowedProfiles?: UserProfile[];
+}
+
+const navigation: { title: string; items: NavigationItem[] }[] = [
   {
     title: "Principal",
     items: [
-      { label: "Visão geral", href: "/", icon: LayoutDashboard },
       {
-        label: "Questionário",
-        href: "/questionario",
+        label: "Visão Geral",
+        href: "/dashboard",
+        allowedProfiles: ['Executor','Analyst'],
+        icon: Grid2X2,
+      },
+      {
+        label: "Gerenciar Questionários",
+        href: "/questionarios",
+        allowedProfiles: ["Executor", "Administrador do Sistema"],
         icon: ClipboardList,
       },
       {
-        label: "Participantes",
-        href: "/participantes",
-        icon: Building2,
-      },
-      {
-        label: "Indicadores Técnicos",
-        href: "/indicadores-tecnicos",
-        icon: ChartNoAxesCombined,
-      },
-      {
-        label: "Configurações",
-        href: "/configuracoes",
-        icon: Settings,
+        label: "Gerenciar Rodadas",
+        href: "/rodadas",
+        allowedProfiles: ["Executor", "Administrador do Sistema"],
+        icon: LucideClipboardCheck,
       },
     ],
   },
+  {
+    title: "Plataforma", items: [
+      {
+        label: "Gerenciar Usuários",
+        href: "/usuarios",
+        allowedProfiles: ["Executor", "Administrador do Sistema"],
+        icon: Users,
+      },
+      {
+        label: "Auditoria",
+        href: "/auditoria",
+        allowedProfiles: ["Executor", "Administrador do Sistema"],
+        icon: Users,
+      }
+  ]}
 ];
 
 export default function Sidebar() {
   return (
-    <aside
-      className="
-        fixed bottom-0 left-0 z-40 w-full
-        border-t border-slate-200/50 bg-navbar
-        md:sticky md:top-0 md:h-screen md:w-64
-        md:shrink-0 md:overflow-hidden
-        md:border-r md:border-t-0
-      "
-    >
+    <aside className="fixed bottom-0 bg-navbar w-full md:w-64 md:min-h-svh z-40">
       {/* Logo - Desktop */}
       <Link
         href="/dashboard"
@@ -57,7 +74,7 @@ export default function Sidebar() {
         className="
           hidden h-16 items-center gap-3
           border-b border-slate-200/50 px-5
-          md:flex
+          md:flex z-40 bottom-0
         "
       >
         <div className="bg-card h-12 w-12 shrink-0 rounded-full" />
@@ -97,34 +114,18 @@ export default function Sidebar() {
                 md:flex-col md:items-stretch
               "
             >
-              {group.items.map((item) => {
-                const Icon = item.icon;
-
-                return (
-                  <Link
-                    key={item.href}
+              {group.items.map((item) => (
+                <DisplayRestriction
+                  key={item.href}
+                  allowedProfiles={item.allowedProfiles}
+                >
+                  <NavItem
                     href={item.href}
-                    title={item.label}
-                    aria-label={item.label}
-                    className="
-                      flex min-w-0 flex-1 flex-col
-                      items-center justify-center gap-1
-                      rounded-lg px-1 py-2
-                      text-center text-[10px] font-medium
-                      text-white transition-colors
-                      hover:bg-slate-800/20
-
-                      md:min-h-11 md:flex-row
-                      md:justify-start md:gap-3
-                      md:px-3 md:text-left md:text-sm
-                    "
-                  >
-                    <Icon size={20} strokeWidth={2.3} className="shrink-0" />
-
-                    <span className="w-full truncate">{item.label}</span>
-                  </Link>
-                );
-              })}
+                    label={item.label}
+                    icon={item.icon}
+                  />
+                </DisplayRestriction>
+              ))}
             </div>
           </section>
         ))}

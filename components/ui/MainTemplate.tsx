@@ -1,4 +1,6 @@
 import React from "react";
+import Breadcrumb from "./Breadcrumb";
+import { BreadcrumbProvider } from "./BreadcrumbContext";
 import Navbar from "./Navbar";
 import Sidebar from "./Sidebar";
 
@@ -8,22 +10,21 @@ interface ExploreTemplateProps {
 
 export default function MainTemplate({ children }: ExploreTemplateProps) {
   return (
-    <div className="min-h-screen bg-zinc-50">
-      {/* Navbar fixa no topo */}
-      <header className="fixed inset-x-0 top-0 z-50 h-16">
-        <Navbar />
-      </header>
-
-      {/* Área abaixo da navbar */}
-      <div className="flex min-h-screen pt-16">
+    <BreadcrumbProvider>
+      <div className="flex min-h-screen">
         {/* Sidebar fixa abaixo da navbar */}
-        <aside className="fixed bottom-0 left-0 top-16 z-40 md:w-16 overflow-y-auto border-r  bg-cyan-950 md:w-64">
-          <Sidebar />
-        </aside>
+        <Sidebar />
 
         {/* Conteúdo ao lado da sidebar */}
-        <main className=" min-w-0 flex-1  md:ml-64 ">{children}</main>
+        <main className=" min-w-0 flex-1 md:ml-64 p-4 bg-template pt-20">
+          <div className="m-auto max-w-7xl">
+            <Breadcrumb />
+            <div className="flex">
+              {children}
+            </div>
+          </div>
+        </main>
       </div>
-    </div>
+    </BreadcrumbProvider>
   );
 }
