@@ -34,26 +34,26 @@ export default function HIW() {
   return (
     <section>
       <Container className="flex flex-col">
-        <div className="flex flex-col-reverse md:grid md:grid-cols-2 items-center gap-8">
+        <div className="flex flex-col-reverse md:grid md:grid-cols-2 items-center gap-8 ">
           <img
-            src="/assets/Questionario.webp"
-            className="border-white/10 border md:border-4 rounded-2xl"
+            src="/assets/Questionario.png"
+            className="border-[#2FBA61]/20 border md:border-4 rounded-2xl"
             alt=""
           />
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-8 w-full">
             <Title children="Como funciona?" />
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4 ">
               {hiwData.map((item) => {
                 const Icon = item.icon;
                 return (
                   <div
                     key={item.id}
-                    className=" flex flex-col gap-2 justify-center rounded-4xl"
+                    className=" flex flex-col gap-2 text-[#2FBA61] justify-center rounded-4xl "
                   >
                     <span>
                       <Icon size={40} strokeWidth={1.5} />
                     </span>
-                    <p className="text-sm md:text-xl text-gray-300 font-semibold">
+                    <p className="text-sm md:text-md max-w-60 text-neutral-600 font-semibold">
                       {item.text}
                     </p>
                   </div>

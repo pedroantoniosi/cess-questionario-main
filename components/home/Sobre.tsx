@@ -6,7 +6,7 @@ export default function Sobre() {
     <section>
       <Container className="grid md:grid-cols-2 items-center">
         <div>
-          <Title children="Sobre o Modelo" />
+          <Title children="Sobre" />
           <p className="text-sm max-w-120">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui ab
             distinctio eius, quo similique repellendus officia incidunt
@@ -16,7 +16,7 @@ export default function Sobre() {
         </div>
         <img
           src="/assets/Veleiro.png"
-          className="w-400 rounded-4xl border-gray-700 border-2 md:border-4"
+          className="w-400 rounded-4xl border-[#2FBA61]/30 border-2 md:border-4"
           alt=""
         />
       </Container>

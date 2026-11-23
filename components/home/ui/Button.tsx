@@ -21,7 +21,7 @@ export default function Button({
 }: ButtonProps) {
   const variants = {
     roundedPrimary:
-      "bg-amber-400 text-slate-900 rounded-xl hover:bg-amber-400/80",
+      "bg-[#2FBA61] text-white   rounded-xl hover:bg-white hover:text-black ",
 
     roundedWhite:
       "border-2 text-white rounded-xl hover:bg-white hover:text-slate-900",

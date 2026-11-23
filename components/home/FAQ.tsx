@@ -27,11 +27,16 @@ const accoddionData = [
 export default function FAQ() {
   return (
     <>
-      <section>
+      <section className="text-white">
         <Container className="flex flex-col gap-2">
           {accoddionData.map((item) => (
-            <article key={item.id}>
-              <Accordion summary={item.question}>{item.anwser}</Accordion>
+            <article
+              key={item.id}
+              className=" rounded-xl text-black font-semibold "
+            >
+              <Accordion summary={item.question}>
+                <span className="text-gray-600 font-normal">{item.anwser}</span>
+              </Accordion>
             </article>
           ))}
         </Container>

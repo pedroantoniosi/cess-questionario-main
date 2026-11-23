@@ -74,9 +74,9 @@ export default function Modal({
           <button
             type="button"
             onClick={onClose}
-            className="rounded-lg bg-amber-400 px-6 py-2.5 
+            className="rounded-lg cursor-pointer bg-green-800 px-6 py-2.5 
             font-semibold text-white transition-colors 
-            hover:bg-amber-500"
+            hover:bg-green-900"
           >
             Fechar
           </button>
