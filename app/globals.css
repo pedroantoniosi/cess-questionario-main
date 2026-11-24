@@ -1,84 +1,74 @@
 @import "tailwindcss";
 
 :root {
-    /* Background colors */
-    --color-card: #21222D;
-    --color-template: #2B2D3D;
-    --color-navbar: #5A5F79;
-
-    /* Status colors */
-    --color-low: #0A4542;
-    --color-medium: #318f58;
-    --color-high: #d2c514;
+    --cess-green-dark: #014720;
+    --cess-green: #278C2C;
+    --cess-yellow: #FDD200;
+    --cess-ink: #10251b;
 }
 
-.bg-rh {
-    background-color: #0B1120;
+* {
+    box-sizing: border-box;
 }
 
-.bg-rh-gradient {
-    background: #22C1C3;
-    background: linear-gradient(0deg, #0F505A 0%, #0B1120 100%);
+html {
+    scroll-behavior: smooth;
 }
 
-/* Backgrounds */
-.bg-card {
-    background-color: var(--color-card);
+body {
+    margin: 0;
+    color: var(--cess-ink);
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #003f27;
 }
 
-.bg-template {
-    background-color: var(--color-template);
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
 }
 
-.bg-navbar {
-    background-color: var(--color-navbar);
+.text-yellow {
+    color: var(--cess-yellow);
 }
 
-/* Text colors */
-.text-low {
-    color: var(--color-low);
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--cess-green-bright);
+    font-weight: 800;
+    line-height: 1.08;
 }
 
-.text-medium {
-    color: var(--color-medium);
+.section-title::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 1.8rem;
+    flex: 0 0 6px;
+    background: var(--cess-yellow);
 }
 
-.text-high {
-    color: var(--color-high);
+.dark-section-title {
+    color: white;
 }
 
-/* Status backgrounds */
-.bg-low {
-    background-color: var(--color-low);
+.dark-section-title::before {
+    background: var(--cess-lime);
 }
 
-.bg-medium {
-    background-color: var(--color-medium);
+.hero-copy {
+    clip-path: polygon(0 0, 100% 0, 76% 100%, 0 100%);
 }
 
-.bg-high {
-    background-color: var(--color-high);
+.hero-photo {
+    background: var(--cess-green);
 }
 
-
-/* Status backgrounds */
-.border-low {
-    border-color: var(--color-low);
-}
-
-.border-medium {
-    border-color: var(--color-medium);
-}
-
-.border-high {
-    border-color: var(--color-high);
-
-}
-
-.btn-high {
-    background-color: var(--color-high);
-
-    &:hover {
-        background-color: hwb(84 9% 20% / 0.8);
+@media (max-width: 767px) {
+    .hero-copy {
+        clip-path: none;
     }
+
 }
