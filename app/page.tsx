@@ -7,7 +7,7 @@ const versions = [
       "Primeira versão do CESS Questionário, com a estrutura inicial, funcionalidades essenciais e organização dos formulários.",
     authors: ["Pedro Ferreira"],
     date: "2025",
-    progress: 90,
+    progress: 10,
     href: "v1",
   },
   {
