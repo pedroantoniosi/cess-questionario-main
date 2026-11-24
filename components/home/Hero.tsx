@@ -21,10 +21,10 @@ export default function Hero() {
               sit veritatis!
             </p>
             <div className="flex gap-2 mt-4">
-              <Link href={"/login"}>
+              <Link href={"/PageInProgress"}>
                 <Button variant={"roundedPrimary"}>Acessar Plataforma</Button>
               </Link>
-              <Link href={"/indicadores"}>
+              <Link href={"/PageInProgress"}>
                 <Button variant={"roundedWhite"}>Ver Indicadores</Button>
               </Link>
             </div>

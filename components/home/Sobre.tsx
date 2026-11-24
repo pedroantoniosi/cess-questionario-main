@@ -3,7 +3,7 @@ import Title from "./ui/Title";
 
 export default function Sobre() {
   return (
-    <section>
+    <section className="bg-white py-16">
       <Container className="grid md:grid-cols-2 items-center">
         <div>
           <Title children="Sobre" />

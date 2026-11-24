@@ -27,7 +27,7 @@ const accoddionData = [
 export default function FAQ() {
   return (
     <>
-      <section className="text-white">
+      <section className="bg-white text-black">
         <Container className="flex flex-col gap-2">
           {accoddionData.map((item) => (
             <article
