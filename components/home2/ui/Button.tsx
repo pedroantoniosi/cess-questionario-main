@@ -20,7 +20,7 @@ export default function Button({
     <button
       type={type}
       onClick={onClick}
-      className={`rounded-md px-4 py-2 font-semibold cursor-pointer transition-colors ${variants[variant]}`}
+      className={`rounded-md px-4 py-2 font-semibold cursor-pointer transition-colors outline-none ${variants[variant]}`}
     >
       {children}
     </button>

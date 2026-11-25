@@ -34,7 +34,7 @@ export function HeroSection() {
           <img
             src="/images/offshore-platform.png"
             alt="Plataforma offshore ao pôr do sol"
-            className="w-200"
+            className="w-250"
           />
         </div>
       </Container>

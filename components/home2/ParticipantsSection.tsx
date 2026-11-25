@@ -4,7 +4,7 @@ import { participants } from "./data/content";
 
 export function ParticipantsSection() {
   return (
-    <section className=" bg-white py-8 md:py-16">
+    <section className=" bg-white py-4 md:py-16">
       <Container className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
           <Title variant="green">Quem pode participar?</Title>

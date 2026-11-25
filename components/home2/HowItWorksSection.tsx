@@ -5,7 +5,7 @@ import { processSteps } from "./data/content";
 
 export function HowItWorksSection() {
   return (
-    <section className="py-8 md:py-16">
+    <section className="py-4 md:py-16">
       <Container className="flex flex-col gap-6">
         <Title variant="light">Como funciona?</Title>
 

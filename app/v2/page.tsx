@@ -1,3 +1,6 @@
+import { AboutPlatformSection } from "@/components/home2/AboutPlatformSection";
+import { DecisionSection } from "@/components/home2/DecisionSection";
+import { FooterLogos } from "@/components/home2/FooterLogos";
 import { HeroSection } from "@/components/home2/HeroSection";
 import { HowItWorksSection } from "@/components/home2/HowItWorksSection";
 import { ParticipantsSection } from "@/components/home2/ParticipantsSection";
@@ -10,9 +13,12 @@ export default function v1() {
       <HeroSection />
       <ParticipantsSection />
       <HowItWorksSection />
-      {/* <AboutPlatformSection />
+      <AboutPlatformSection />
       <DecisionSection />
-      <FooterLogos /> */}
+      <FooterLogos />
+      {/* 
+     
+       */}
     </>
   );
 }
