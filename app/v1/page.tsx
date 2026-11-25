@@ -8,15 +8,13 @@ import Solucao from "@/components/home/Solucao";
 export default function page() {
   return (
     <>
-      <div className="bg-[#E9E9E9]">
-        <HeroSection />
-        <Partners />
-        <Solucao />
-        <Benefits />
-        <Participants />
-
-        <FAQ />
-      </div>
+      <HeroSection />
+      <Partners />
+      <Solucao />
+      <Benefits />
+      <Participants />
+      <FAQ />
+      <Partners />
     </>
   );
 }

@@ -21,7 +21,7 @@ export function DecisionSection() {
             >
               <div className="flex items-center gap-2">
                 <Icon
-                  className="shrink-0 text-(--cess-yellow)"
+                  className="shrink-0 text-(--v1-green)"
                   size={42}
                   strokeWidth={2.5}
                 />

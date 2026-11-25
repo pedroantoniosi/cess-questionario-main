@@ -6,9 +6,10 @@ import Container from "../ui/Container";
 export function HeroSection() {
   return (
     <section
-      className={`flex items-center w-full bg-[url('/assets/hero-mobile.png')] md:bg-[url('/assets/hero.png')] bg-cover min-h-svh md:min-h-[80svh]`}
+      className={`flex items-center w-full bg-[url('/assets/v1/hero-mobile.webp')] 
+        md:bg-[url('/assets/v1/hero.webp')] bg-cover md:min-h-[75svh]`}
     >
-      <Container className="grid md:grid-cols-2 items-center min-h-[80svh] ">
+      <Container className="grid md:grid-cols-2 items-center  ">
         <div className="flex flex-col items-start gap-4">
           <h1 className="max-w-135 text-white text-2xl md:text-3xl font-black">
             <Title variant="light">

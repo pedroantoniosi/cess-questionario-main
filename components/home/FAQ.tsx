@@ -4,22 +4,27 @@ import Accordion from "../ui/Accordion";
 const accoddionData = [
   {
     id: 0,
-    question: "Aqui será inserido a pergunta",
+    question: "Quem pode se cadastrar?",
     anwser: "Resposta",
   },
   {
     id: 1,
-    question: "Aqui será inserido a pergunta",
+    question: "Que tipo de benefícios a plataforma oferece?",
     anwser: "Resposta",
   },
   {
     id: 2,
-    question: "Aqui será inserido a pergunta",
+    question: "Qual valor de mercado a plataforma agrega?",
     anwser: "Resposta",
   },
   {
     id: 3,
-    question: "Aqui será inserido a pergunta",
+    question: "Quanto custa para participar?",
+    anwser: "Resposta",
+  },
+  {
+    id: 4,
+    question: "Quão seguro é registrar meus dados?",
     anwser: "Resposta",
   },
 ];

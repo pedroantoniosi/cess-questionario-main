@@ -9,16 +9,16 @@ export default function Solucao() {
           <Lightbulb
             width={50}
             height={50}
-            className="text-[#2FBA61] shrink-0"
+            className="text-(--v1-green) shrink-0"
           />
-
+          <span className="w-0.5 h-12 bg-(--v1-green)"></span>
           <h2 className="font-bold text-3xl md:text-5xl text-white">Solução</h2>
         </div>
-
         <p className="text-center md:text-start text-white max-w-150">
-          Uma metodologia que integra oito dimensões de avaliação e uma
-          progressão de maturidade (N1 a N5), gerando indicadores consolidados e
-          comparáveis por instalação e para o setor como um todo.
+          Ambiente colaborativo que organiza e consolida informações da cadeia
+          de reciclagem de plataformas offshore no Brasil, conectando
+          estaleiros, portos e recicladoras e estruturada para análises da
+          Petrobras.
         </p>
       </Container>
     </section>
