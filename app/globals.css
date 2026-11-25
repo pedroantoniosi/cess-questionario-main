@@ -5,6 +5,9 @@
     --cess-green: #278C2C;
     --cess-yellow: #FDCF00;
     --cess-ink: #10251b;
+    --v1-green-dark: #004729;
+    --v1-green: #00F867;
+    --v1-green-light: #AFFED8;
 }
 
 * {
@@ -28,35 +31,6 @@ a {
     -webkit-tap-highlight-color: transparent;
 }
 
-.text-yellow {
-    color: var(--cess-yellow);
-}
-
-.section-title {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    color: var(--cess-green-bright);
-    font-weight: 800;
-    line-height: 1.08;
-}
-
-.section-title::before {
-    content: "";
-    display: block;
-    width: 6px;
-    height: 1.8rem;
-    flex: 0 0 6px;
-    background: var(--cess-yellow);
-}
-
-.dark-section-title {
-    color: white;
-}
-
-.dark-section-title::before {
-    background: var(--cess-lime);
-}
 
 .hero-copy {
     clip-path: polygon(0 0, 100% 0, 76% 100%, 0 100%);

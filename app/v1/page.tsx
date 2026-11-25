@@ -1,15 +1,22 @@
+import Benefits from "@/components/home/Benefits";
 import FAQ from "@/components/home/FAQ";
-import Hero from "@/components/home/Hero";
+import { HeroSection } from "@/components/home/HeroSection";
+import { Participants } from "@/components/home/Participants";
 import Partners from "@/components/home/Partners";
+import Solucao from "@/components/home/Solucao";
 
 export default function page() {
   return (
     <>
-      <Partners />
-      <Hero />
+      <div className="bg-[#E9E9E9]">
+        <HeroSection />
+        <Partners />
+        <Solucao />
+        <Benefits />
+        <Participants />
 
-      {/* <Solucao /> */}
-      <FAQ />
+        <FAQ />
+      </div>
     </>
   );
 }

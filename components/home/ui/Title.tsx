@@ -1,10 +1,20 @@
 interface TitleProps {
-  children: string;
+  children: React.ReactNode;
+  variant?: "dark" | "light" | "green";
 }
 
-export default function Title({ children }: TitleProps) {
+export default function Title({ children, variant = "dark" }: TitleProps) {
+  const variants = {
+    dark: "text-black",
+    light: "text-white",
+    green: "text-[var(--cess-green-dark)]",
+  };
+
   return (
-    <h2 className="text-center md:text-start max-w-100 text-3xl lg:text-4xl mb-2 text-[#2FBA61] font-bold">
+    <h2
+      className={`flex items-center gap-4 text-3xl font-extrabold leading-tight ${variants[variant]}`}
+    >
+      <span className="h-[1.8rem] w-1.5 shrink-0 bg-(--v1-green)" />
       {children}
     </h2>
   );

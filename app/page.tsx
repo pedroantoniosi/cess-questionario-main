@@ -6,8 +6,8 @@ const versions = [
     description:
       "Primeira versão do CESS Questionário, com a estrutura inicial, funcionalidades essenciais e organização dos formulários.",
     authors: ["Pedro Ferreira"],
-    date: "2025",
-    progress: 10,
+    date: "2026",
+    progress: 50,
     href: "v1",
   },
   {
@@ -16,16 +16,16 @@ const versions = [
       "Evolução da plataforma com melhorias na interface, experiência do usuário, organização dos dados e novas funcionalidades.",
     authors: ["Pedro Ferreira"],
     date: "2026",
-    progress: 20,
+    progress: 80,
     href: "/v2",
   },
   {
     title: "Versão V3",
     description:
       "Nova geração do CESS Questionário, com aprimoramentos estruturais, modernização visual e novas possibilidades de expansão.",
-    authors: ["Pedro Ferreira"],
+    authors: ["Pedro Ferreira", "João Gabriel", "Lorenzo Myrrha"],
     date: "2026",
-    progress: 50,
+    progress: 30,
     href: "/v3",
   },
 ];

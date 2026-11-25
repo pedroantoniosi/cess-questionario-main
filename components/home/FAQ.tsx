@@ -27,8 +27,13 @@ const accoddionData = [
 export default function FAQ() {
   return (
     <>
-      <section className="bg-white text-black">
+      <section className="bg-white text-black py-8">
         <Container className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 py-8">
+            <h2 className="text-center text-4xl font-semibold text-black">
+              Perguntas Frequentes
+            </h2>
+          </div>
           {accoddionData.map((item) => (
             <article
               key={item.id}
