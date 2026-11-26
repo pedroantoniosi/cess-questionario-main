@@ -6,7 +6,7 @@ const versions = [
     description: "Versão V1 Pré Revisão Final",
     authors: ["Pedro Ferreira"],
     date: "2026",
-    progress: 95,
+    progress: 100,
     href: "v1",
   },
   {
@@ -14,7 +14,7 @@ const versions = [
     description: "Versão V2 Pré Revisão Final",
     authors: ["Pedro Ferreira"],
     date: "2026",
-    progress: 95,
+    progress: 100,
     href: "/v2",
   },
   {
