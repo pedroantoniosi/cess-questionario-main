@@ -22,7 +22,14 @@ export const decisionFeatures = [
 
 export default function Benefits() {
   return (
-    <section className="relative border-y-2 border-transparent bg-linear-to-r from-[#003f27] via-[#006c2f] to-[#003f27] px-4 py-12 sm:py-16 before:absolute before:inset-x-0 before:top-0 before:h-[2px] before:bg-linear-to-r before:from-transparent before:via-amber-300 before:to-transparent after:absolute after:inset-x-0 after:bottom-0 after:h-[2px] after:bg-linear-to-r after:from-transparent after:via-amber-300 after:to-transparent">
+    <section
+      className="relative border-y-2 border-transparent bg-linear-to-r from-[#003F27] via-[#014720]
+  to-[#003F27] px-4 py-12 sm:py-16
+  before:absolute before:inset-x-0 before:top-0 before:h-0.5
+  before:bg-[linear-gradient(to_right,transparent_30%,#fcd34d_50%,transparent_70%)]
+  after:absolute after:inset-x-0 after:bottom-0 after:h-0.5
+  after:bg-[linear-gradient(to_right,transparent_30%,#fcd34d_50%,transparent_70%)]"
+    >
       {" "}
       <Container>
         <div className="flex flex-col gap-3 py-8">

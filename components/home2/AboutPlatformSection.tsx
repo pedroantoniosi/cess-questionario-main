@@ -6,7 +6,14 @@ export function AboutPlatformSection() {
   const Icon = respondentProfile.icon;
 
   return (
-    <section className="py-16 bg-(--cess-green-dark)">
+    <section
+      className="relative border-y-2 border-transparent bg-linear-to-r from-[#014720] via-[#014720]
+  to-[#014720] px-4 py-12 sm:py-16
+  before:absolute before:inset-x-0 before:top-0 before:h-0.5
+  before:bg-[linear-gradient(to_right,transparent_30%,#278C2C_50%,transparent_70%)]
+  after:absolute after:inset-x-0 after:bottom-0 after:h-0.5
+  after:bg-[linear-gradient(to_right,transparent_30%,#278C2C_50%,transparent_70%)]"
+    >
       <Container className="grid md:grid-cols-2 gap-4">
         <div className="flex flex-col gap-4 justify-center">
           <Title variant="light">Sobre a Plataforma</Title>
@@ -24,7 +31,7 @@ export function AboutPlatformSection() {
         </div>
         <div className="flex flex-col gap-4">
           <img
-            src="/images/vessel.jpg"
+            src="/assets/v2/recycling-shipyard.webp"
             alt=""
             className="rounded-xl h-70 object-cover"
           />

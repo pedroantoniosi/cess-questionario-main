@@ -16,11 +16,11 @@ export function DecisionSection() {
             os fornecedores da cadeia de reciclagem.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {decisionFeatures.map(({ title, description, icon: Icon }) => (
             <article
               key={title}
-              className="flex  flex-col gap-4  rounded-2xl border-2 border-gray-200 p-4"
+              className="flex  flex-col gap-6  rounded-2xl border-2 border-gray-200 p-4"
             >
               <div className="flex items-center gap-2">
                 <Icon

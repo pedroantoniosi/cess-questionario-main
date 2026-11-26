@@ -26,12 +26,8 @@ export function HeroSection() {
             plataformas offshore.
           </p>
           <div className="flex flex-col md:flex-row gap-2 mt-4">
-            <Link href="/PageInProgress">
+            <Link href="https://questionario-cess.vercel.app/login">
               <Button variant="green">Cadastre sua Instalação</Button>
-            </Link>
-
-            <Link href="/PageInProgress">
-              <Button>Ver Indicadores</Button>
             </Link>
           </div>
         </div>
