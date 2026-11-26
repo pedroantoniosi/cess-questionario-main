@@ -4,7 +4,10 @@ import { decisionFeatures } from "./data/content";
 
 export function DecisionSection() {
   return (
-    <section className="flex w-full flex-col gap-4 border-white bg-[--cess-green]  text-white py-4 md:py-16 ">
+    <section
+      className="bg-(--cess-green-dark) flex w-full flex-col gap-4 border-white bg-[--cess-green] 
+     text-white py-4 md:py-16 "
+    >
       <Container className="flex flex-col gap-8">
         <div className="flex flex-col gap-1">
           <Title variant="light">Inteligência para decisão</Title>

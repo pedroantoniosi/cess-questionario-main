@@ -3,20 +3,18 @@ import Card from "@/components/ui/CardProgress";
 const versions = [
   {
     title: "Versão V1",
-    description:
-      "Primeira versão do CESS Questionário, com a estrutura inicial, funcionalidades essenciais e organização dos formulários.",
+    description: "Versão V1 Pré Revisão Final",
     authors: ["Pedro Ferreira"],
     date: "2026",
-    progress: 50,
+    progress: 95,
     href: "v1",
   },
   {
     title: "Versão V2",
-    description:
-      "Evolução da plataforma com melhorias na interface, experiência do usuário, organização dos dados e novas funcionalidades.",
+    description: "Versão V2 Pré Revisão Final",
     authors: ["Pedro Ferreira"],
     date: "2026",
-    progress: 80,
+    progress: 95,
     href: "/v2",
   },
   {

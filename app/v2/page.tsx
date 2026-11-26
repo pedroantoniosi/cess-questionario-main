@@ -15,9 +15,6 @@ export default function v1() {
       <AboutPlatformSection />
       <DecisionSection />
       <Partners />
-      {/* 
-     
-       */}
     </>
   );
 }

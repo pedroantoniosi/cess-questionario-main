@@ -1,4 +1,3 @@
-import { FileText } from "lucide-react";
 import Title from "../home2/ui/Title";
 import Container from "../ui/Container";
 import { respondentProfile } from "./data/content";
@@ -7,7 +6,7 @@ export function AboutPlatformSection() {
   const Icon = respondentProfile.icon;
 
   return (
-    <section className="py-16">
+    <section className="py-16 bg-(--cess-green-dark)">
       <Container className="grid md:grid-cols-2 gap-4">
         <div className="flex flex-col gap-4 justify-center">
           <Title variant="light">Sobre a Plataforma</Title>
@@ -27,21 +26,8 @@ export function AboutPlatformSection() {
           <img
             src="/images/vessel.jpg"
             alt=""
-            className="rounded-xl h-50 object-cover"
+            className="rounded-xl h-70 object-cover"
           />
-          <div className="flex flex-col sm:flex-row bg-gray-200 p-4 rounded-xl items-center gap-4">
-            <span className="text-(--cess-yellow)">
-              <FileText size={50} strokeWidth={2.4} />
-            </span>
-            <div className="flex flex-col ">
-              <h2 className="text-2xl font-bold">Perfil do Respondente</h2>
-              <p className="max-w-120">
-                Representa a instalçaão partipante (estaleiro, porto ou
-                recicladora) é reponsável pelo preenchimento do diagnóstico da
-                plataforma.
-              </p>
-            </div>
-          </div>
         </div>
       </Container>
     </section>

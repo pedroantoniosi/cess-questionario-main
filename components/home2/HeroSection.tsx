@@ -4,7 +4,7 @@ import Container from "../ui/Container";
 
 export function HeroSection() {
   return (
-    <section>
+    <section className="bg-(--cess-green-dark)">
       <Container className="grid md:grid-cols-2 items-center min-h-[80svh]">
         <div className="flex flex-col items-start gap-4">
           <span className="mt-1 h-14 w-1.5 shrink-0 " />

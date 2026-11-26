@@ -24,7 +24,7 @@ export const participants = [
 
 export function Participants() {
   return (
-    <section className="py-4 md:py-16">
+    <section className="py-4 md:py-16 bg-[#003f27]">
       <Container className="flex flex-col gap-8 bg-(--v1-green-dark) md:p-8 md:rounded-4xl">
         <div className="flex flex-col gap-2 py-8">
           <h2 className="text-center text-4xl font-semibold text-white">

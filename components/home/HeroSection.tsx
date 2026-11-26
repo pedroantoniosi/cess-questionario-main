@@ -7,7 +7,7 @@ export function HeroSection() {
   return (
     <section
       className={`flex items-center w-full bg-[url('/assets/v1/hero-mobile.webp')] 
-        md:bg-[url('/assets/v1/hero.webp')] bg-cover md:min-h-[75svh]`}
+        md:bg-[url('/assets/v1/hero.webp')] bg-cover md:min-h-[75svh] py-16`}
     >
       <Container className="grid md:grid-cols-2 items-center  ">
         <div className="flex flex-col items-start gap-4">
@@ -25,7 +25,7 @@ export function HeroSection() {
             recicladoras que atuam ou desejam atuar no descomissionamento de
             plataformas offshore.
           </p>
-          <div className="flex gap-2 mt-4">
+          <div className="flex flex-col md:flex-row gap-2 mt-4">
             <Link href="/PageInProgress">
               <Button variant="green">Cadastre sua Instalação</Button>
             </Link>

@@ -32,20 +32,20 @@ const accoddionData = [
 export default function FAQ() {
   return (
     <>
-      <section className="bg-white text-black py-8">
-        <Container className="flex flex-col gap-2">
-          <div className="flex flex-col gap-2 py-8">
-            <h2 className="text-center text-4xl font-semibold text-black">
+      <section className="bg-(--v1-green-dark) py-8 text-white">
+        <Container className="flex flex-col gap-2 max-w-250">
+          <div className="flex flex-col gap-2">
+            <h2 className="text-center text-4xl font-semibold mb-4">
               Perguntas Frequentes
             </h2>
           </div>
           {accoddionData.map((item) => (
             <article
               key={item.id}
-              className=" rounded-xl text-black font-semibold "
+              className=" rounded-xl font-semibold bg-green-600/20"
             >
               <Accordion summary={item.question}>
-                <span className="text-gray-600 font-normal">{item.anwser}</span>
+                <span className="text-gray-200 font-normal">{item.anwser}</span>
               </Accordion>
             </article>
           ))}
