@@ -15,7 +15,7 @@ export function HowItWorksSection() {
               key={title}
               className="relative flex flex-col items-center gap-2 text-center"
             >
-              <div className="flex h-17.5 w-17.5 items-center justify-center rounded-[17px] bg-[#138c43] text-(--cess-yellow)">
+              <div className="flex h-17.5 w-17.5 items-center justify-center rounded-[17px] bg-(--cess-green) text-(--cess-yellow)">
                 <Icon size={42} strokeWidth={2.4} />
               </div>
               <h3 className="max-w-48 text-white font-bold text-xl">{title}</h3>

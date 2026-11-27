@@ -20,11 +20,11 @@ export function DecisionSection() {
           {decisionFeatures.map(({ title, description, icon: Icon }) => (
             <article
               key={title}
-              className="flex  flex-col gap-6  rounded-2xl border-2 border-gray-200 p-4"
+              className="flex  flex-col gap-6  rounded-2xl border-2 border-gray-300 p-4"
             >
               <div className="flex items-center gap-2">
                 <Icon
-                  className="shrink-0 text-(--v1-green)"
+                  className="shrink-0 text-(--cess-yellow)"
                   size={42}
                   strokeWidth={2.5}
                 />
